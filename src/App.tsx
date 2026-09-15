@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 
 const IMG_URL =
-  "https://drive.google.com/file/d/1POxI8hYUFmy9xi5H4WlaT1-giKkXL27S/view?usp=sharing";
+  "/public/myimage.png";
 
 const TICKER_ITEMS = [
   "React", "JavaScript", "Node.js", "PostgreSQL", "Performance", "Python","System Design", "UI/UX","WebSockets", "REST APIs",
