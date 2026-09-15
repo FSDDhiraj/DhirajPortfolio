@@ -1,0 +1,107 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Mono:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Instrument+Sans:wght@400;500;600&display=swap');
+@import 'tailwindcss';
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-border: var(--border);
+}
+
+:root {
+  --background: #0c0c0c;
+  --foreground: #e8e4dc;
+  --card: #141414;
+  --card-foreground: #e8e4dc;
+  --primary: #e8e4dc;
+  --primary-foreground: #0c0c0c;
+  --muted: #1e1e1e;
+  --muted-foreground: #6b6662;
+  --border: #2a2a2a;
+}
+
+* { box-sizing: border-box; }
+
+html {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: 'Instrument Sans', sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+body {
+  margin: 0;
+  overflow-x: hidden;
+}
+
+::-webkit-scrollbar { width: 0; background: transparent; }
+
+.mono { font-family: 'DM Mono', monospace; }
+
+/* ─── Ticker ─── */
+@keyframes ticker {
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+.ticker-track {
+  display: flex;
+  width: max-content;
+  animation: ticker 22s linear infinite;
+}
+.ticker-track:hover { animation-play-state: paused; }
+
+/* ─── Landing animations ─── */
+@keyframes ruleExpand {
+  from { transform: scaleX(0); }
+  to   { transform: scaleX(1); }
+}
+@keyframes revealUp {
+  from { opacity: 0; transform: translateY(28px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+@keyframes scanLine {
+  0%   { left: -2px; opacity: 0.6; }
+  80%  { left: 100%; opacity: 0.6; }
+  100% { left: 100%; opacity: 0; }
+}
+
+.anim-rule {
+  transform-origin: left center;
+  animation: ruleExpand 0.7s cubic-bezier(0.76, 0, 0.24, 1) forwards;
+  animation-play-state: paused;
+}
+.anim-up {
+  opacity: 0;
+  animation: revealUp 0.8s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+  animation-play-state: paused;
+}
+.anim-fade {
+  opacity: 0;
+  animation: fadeIn 0.9s ease forwards;
+  animation-play-state: paused;
+}
+.anim-scan {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 1px;
+  background: linear-gradient(to bottom, transparent, var(--foreground), transparent);
+  animation: scanLine 1.6s cubic-bezier(0.4, 0, 0.6, 1) forwards;
+  animation-play-state: paused;
+  pointer-events: none;
+  z-index: 10;
+}
+
+.hero-ready .anim-rule { animation-play-state: running; }
+.hero-ready .anim-up   { animation-play-state: running; }
+.hero-ready .anim-fade { animation-play-state: running; }
+.hero-ready .anim-scan { animation-play-state: running; }

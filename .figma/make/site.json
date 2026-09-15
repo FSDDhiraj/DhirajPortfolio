@@ -1,0 +1,10 @@
+{
+  "description": "Showcases a software engineer's portfolio highlighting projects in React, TypeScript, and Node to demonstrate expertise in system design and UX.",
+  "robots": {
+    "index": false
+  },
+  "accessibility": {
+    "addBypassLinks": false,
+    "ignoreReducedMotion": false
+  }
+}
