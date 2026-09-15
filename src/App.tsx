@@ -1,12 +1,10 @@
-import { useState, useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 
 const IMG_URL =
-  "https://images.unsplash.com/photo-1618987532706-91c8ba78bfff?w=600&h=600&fit=crop&auto=format";
+  "https://drive.google.com/file/d/1POxI8hYUFmy9xi5H4WlaT1-giKkXL27S/view?usp=sharing";
 
 const TICKER_ITEMS = [
-  "React", "TypeScript", "Node.js", "PostgreSQL",
-  "Distributed Systems", "Performance", "Go", "Linux",
-  "WebSockets", "REST APIs",
+  "React", "JavaScript", "Node.js", "PostgreSQL", "Performance", "Python","System Design", "UI/UX","WebSockets", "REST APIs",
 ];
 
 const WORKS = [
@@ -161,7 +159,7 @@ function DoubleImage() {
       >
         <img
           src={IMG_URL}
-          alt="Dhiraj Singh — software engineer"
+          alt="Dhiraj Sonawane — software engineer"
           style={{ width: "100%", height: "100%", objectFit: "cover", display: "block", filter: "grayscale(20%)" }}
         />
       </div>
@@ -213,7 +211,7 @@ function Hero() {
         >
           DHIRAJ
           <br />
-          SINGH
+          Sonawane
         </h1>
 
         <DoubleImage />
@@ -225,7 +223,7 @@ function Hero() {
           className="anim-up text-lg md:text-xl leading-relaxed"
           style={{ color: "var(--muted-foreground)", fontWeight: 400, animationDelay: "0.7s" }}
         >
-          I build software
+          I build Full stack websites,
           <br />
           <em style={{ color: "var(--foreground)", fontStyle: "italic" }}>
             that behaves like software.
@@ -238,7 +236,7 @@ function Hero() {
         className="anim-up mono text-xs tracking-widest mb-14"
         style={{ color: "var(--muted-foreground)", animationDelay: "0.82s" }}
       >
-        React · TypeScript · Node · Systems · Performance · UX
+       MERN Stack · React · Node · JavaScript · Python · System Design · Performance · UI/UX
       </p>
 
       {/* CTA buttons */}
@@ -255,7 +253,7 @@ function Hero() {
           VIEW WORK
         </a>
         <a
-          href="#"
+          href="#resume"
           className="mono text-xs tracking-[0.15em] px-6 py-3 transition-all hover:opacity-60"
           style={{
             border: "1px solid var(--border)",
@@ -266,7 +264,7 @@ function Hero() {
           RESUME ↓
         </a>
         <a
-          href="https://github.com"
+          href="https://github.com/FSDDhiraj"
           target="_blank"
           rel="noreferrer"
           className="mono text-xs tracking-[0.15em] px-6 py-3 transition-all hover:opacity-60"
@@ -467,7 +465,7 @@ function Contact() {
             className="mono text-lg md:text-2xl tracking-tight transition-opacity hover:opacity-50"
             style={{ color: "var(--foreground)", textDecoration: "none" }}
           >
-            dhiraj@example.com
+            dhirajwfwork@gmail.com
           </a>
         </div>
         <span className="mono text-xs" style={{ color: "var(--muted-foreground)" }}>
