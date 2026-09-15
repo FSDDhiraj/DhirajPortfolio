@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 
-const IMG_URL = "/myimage.png";
+const IMG_URL = "./assets/myimage.png";
 
 const TICKER_ITEMS = [
   "React", "JavaScript", "Node.js", "PostgreSQL", "Performance", "Python","System Design", "UI/UX","WebSockets", "REST APIs",
